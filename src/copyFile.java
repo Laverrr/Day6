@@ -23,8 +23,8 @@ public class copyFile {
 
     }
     private static void copyFileUsingFileStreams(java.io.File source, java.io.File dest) throws IOException {
-        InputStream input = null;
-        OutputStream output = null;
+        FileInputStream input = null;
+        FileOutputStream output = null;
         try {
             input = new FileInputStream(source);
             output = new FileOutputStream(dest);
