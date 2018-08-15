@@ -1,10 +1,9 @@
 import java.nio.ByteBuffer;
 
 public class ByteBufferTest {
-
     public static void main(String[] args) {
-        byte[] data = {'a', 'b', 'c'};
-
+        byte[] data = {'1', '2', '3'};
+        
         ByteBuffer b = ByteBuffer.allocateDirect(65536);
         b.put(data);
         ByteBuffer b2 = ByteBuffer.allocate(4096);
@@ -14,6 +13,7 @@ public class ByteBufferTest {
         byte[] bytes= new byte[b.position()];
         b.flip();
         b.get(bytes);
+        System.out.println(new String(bytes));
         System.out.println(new String(bytes));
 
 
